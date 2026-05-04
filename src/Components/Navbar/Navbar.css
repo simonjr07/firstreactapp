@@ -1,0 +1,125 @@
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+/* ===== LOGO ===== */
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar__logo--icon {
+    font-size: 28px;
+}
+
+.navbar__logo--text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* ===== NAV LINKS ===== */
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__links li a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar__links li a:hover {
+    color: #f4a623;
+}
+
+/* ===== BUTTON ===== */
+.navbar__btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4a623;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar__btn:hover {
+    background-color: #e09510;
+    transform: scale(1.05);
+}
+
+/* ===== HAMBURGER MENU ===== */
+.navbar__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.navbar__hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .navbar__hamburger {
+        display: flex;
+    }
+
+    .navbar__btn {
+        display: none;
+    }
+
+    .navbar__links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .navbar__links--open {
+        display: flex;
+    }
+}
